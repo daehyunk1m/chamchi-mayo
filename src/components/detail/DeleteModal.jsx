@@ -18,10 +18,10 @@ const DeleteModal = (props) => {
 
   const handleClickDelete = async () => {
     const isPasswordMatched = password === props.post.password;
-    const URL = `${props.post.id}`;
+    const URL = `http://localhost:5001/posts/${props.post.id}`;
 
     if (isPasswordMatched) {
-      const response = await axios.delete(URL, { crossdomain: true });
+      const response = await axios.delete(URL);
       window.location.href = '/';
     } else {
       setErrorMessages({
