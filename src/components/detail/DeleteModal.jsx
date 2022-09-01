@@ -21,7 +21,7 @@ const DeleteModal = (props) => {
     const URL = `${props.post.id}`;
 
     if (isPasswordMatched) {
-      const response = await axios.delete(URL);
+      const response = await axios.delete(URL, { crossdomain: true });
       window.location.href = '/';
     } else {
       setErrorMessages({
