@@ -5,7 +5,6 @@ const Button = styled.button`
   background-color: ${props => props.backgroundColor};
   color: ${props => props.bodyColor} !important;
   width: 80px;
-  height: 30px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
