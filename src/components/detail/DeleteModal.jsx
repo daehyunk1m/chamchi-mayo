@@ -21,7 +21,7 @@ const DeleteModal = (props) => {
     const URL = `http://localhost:5001/posts/${props.post.id}`;
 
     if (isPasswordMatched) {
-      const response = await axios.delete(URL);
+      await axios.delete(URL);
       window.location.href = '/';
     } else {
       setErrorMessages({
